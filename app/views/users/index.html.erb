@@ -1,0 +1,17 @@
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Number</th>
+    </thead>
+    <tbody>
+<% @user.each do |person| %>
+    <tr>
+        <td><%= person.name %></td>
+        <td><%= person.number%></td>
+        <td><%= link_to "delete", person, method: :delete,
+                                  data: { confirm: "You sure?" } %></td>
+    </tr>
+<% end %>
+    </tbody>
+</table>
