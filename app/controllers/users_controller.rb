@@ -25,7 +25,7 @@ before_filter :authenticate, :except => [:new ]
 
     @name = user.name
     @phone_number = user.number
-    message = "Hey #@name, you have now been unsubscribed from memes daily. "
+    message = "Hey #@name, hate to see you go.. but I love to watch you leave. You have now been unsubscribed from memes daily. "
     @message = @client.account.messages.create(
                                               from: '+19147684531',
                                               to: @phone_number,
